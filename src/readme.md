@@ -1,0 +1,2 @@
+--Template Literals/Strings
+--Objects Shorthand Notation-if key and value are same then ignore the key part

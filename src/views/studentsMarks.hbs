@@ -1,0 +1,100 @@
+<h3>AVERAGE SCORES IN EACH SUBJECT</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Subject</th>
+      <th scope="col">Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each avgScores}}
+    <tr>
+      <th>{{this.subjects}}</th>
+      <td>{{this.average}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<h3>OVERALL TOP SCORER</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each overall_toper}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.total}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</table>
+<br>
+<h3>TOP SCORES IN EACH SUBJECT</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Name</th>
+      <th>Mark</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each each_subject_topper}}
+    <tr>
+      <td>{{this.subjects}}</td>
+      <td>{{this.names}}</td>
+      <td>{{this.marks}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<h1>No of Students below 35 marks</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Subject</th>
+      <th scope="col">No. of Students</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each less_than35}}
+    <tr>
+      <td>{{this.subjects}}</td>
+      <td>{{this.count}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<hr>
+SHEET
+<hr>
+<h1>Students Mark List</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th>Subject1</th>
+      <th>Subject2</th>
+      <th>Subject3</th>
+      <th>Subject4</th>
+      <th>Subject5</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each MarkSheet}}
+    <tr>
+      <td>{{this.names}}</td>
+      {{#each this.marks}}
+      <td>{{this}}</td>
+      {{/each}}
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
